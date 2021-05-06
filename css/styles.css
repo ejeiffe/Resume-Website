@@ -142,3 +142,12 @@ footer {
     column-gap: 20px;
   }
 }
+@media screen and (max-width: 749px) {
+  .contact-info {
+    display: block;
+  }
+  header h1 {
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+}
