@@ -37,7 +37,6 @@ a:hover {
 }
 h1 {
   font-size: 80px;
-  line-height: 1.5;
 }
 h2 {
   font-size: 45px;
@@ -46,6 +45,7 @@ h1,
 h2 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  line-height: 1.5;
 }
 h3 {
   margin-bottom: 0;
@@ -54,7 +54,7 @@ h3 {
   max-width: 1000px;
   width: 85%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 .item-details h3 ~ p {
   margin: 0;
@@ -75,12 +75,28 @@ header {
 header h2 {
   line-height: 1;
 }
+header .content-wrap {
+  padding-bottom: 20px;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+}
+.navbar a {
+  color: #3fdecc;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
 
 /*Projects*/
-.projects {
+#projects {
   background: #fcf7ed;
 }
-.projects .btn {
+#projects .btn {
   background: #fcf7ed;
   color: #ff5154;
   text-decoration: none;
@@ -88,7 +104,7 @@ header h2 {
   border: 4px solid #83bcff;
   display: inline-block;
 }
-.projects .btn:hover {
+#projects .btn:hover {
   background: #83bcff;
 }
 .project-item {
@@ -96,7 +112,7 @@ header h2 {
 }
 
 /*Work Experience*/
-.work-experience {
+#work-experience {
   background: #34252f;
   color: #fcf7ed;
 }
@@ -105,7 +121,7 @@ header h2 {
 }
 
 /*Education*/
-.education {
+#education {
   background: #fcf7ed;
 }
 
@@ -134,7 +150,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 20px;
-    align-items: center;
+    align-items: start;
+  }
+  .project-item h3 {
+    margin-top: 0;
   }
   .job-item {
     display: grid;
@@ -149,5 +168,9 @@ footer {
   header h1 {
     line-height: 1;
     margin-bottom: 20px;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
