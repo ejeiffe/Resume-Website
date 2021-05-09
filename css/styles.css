@@ -30,7 +30,7 @@ img {
   height: auto;
 }
 a {
-  color: #ff5154;
+  color: #3fdecc;
 }
 a:hover {
   text-decoration: none;
@@ -76,29 +76,48 @@ header h2 {
   line-height: 1;
 }
 header .content-wrap {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-.navbar ul {
+header p {
+  margin-bottom: 0;
+}
+
+/*Navbar*/
+nav {
+  background: #34252f;
+}
+nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
   margin: 0;
-  padding-left: 0;
+  padding: 10px 0;
 }
-.navbar a {
-  color: #3fdecc;
+nav a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navicon {
+  color: #3fdecc;
+  display: none;
 }
 
 /*Projects*/
 #projects {
   background: #fcf7ed;
 }
+#projects a {
+  color: #ff5154;
+}
 #projects .btn {
   background: #fcf7ed;
-  color: #ff5154;
   text-decoration: none;
   padding: 8px;
   border: 4px solid #83bcff;
@@ -139,7 +158,6 @@ footer {
 }
 .big-link {
   font-size: 36px;
-  color: #3fdecc;
   display: block;
   padding: 10px;
 }
@@ -162,15 +180,37 @@ footer {
   }
 }
 @media screen and (max-width: 749px) {
-  .contact-info {
-    display: block;
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 36px;
   }
   header h1 {
     line-height: 1;
     margin-bottom: 20px;
   }
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: space-between;
+  header h2:last-of-type {
+    margin-top: 15px;
+  }
+  header .content-wrap {
+    padding-bottom: 0;
+  }
+  nav ul {
+    display: none;
+  }
+  .visible {
+    display: block;
+  }
+  .navicon {
+    display: block;
+    text-align: right;
+    padding: 5px 10px;
+  }
+  .contact-info {
+    display: block;
+  }
+  .contact-info a {
+    display: inline;
   }
 }

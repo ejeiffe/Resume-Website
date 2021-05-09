@@ -7,26 +7,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/289e406dbd.js" crossorigin="anonymous"></script>
+    <script src="script.js" async></script>
   </head>
   <body>
     <main>
       <!--About-->
-      <header>
+      <header id="about">
         <div class="content-wrap">
           <h1>Eleanor Eiffe</h1>
           <h2>Medicinal Chemist</h2>
           <h2>Building Things with Python</h2>
           <p>As a drug designer, I relish the challenge of solving complex problems at the molecular level. When I started learning Python, I realised that solving problems with code scratched the same itch in my brain. Now I'm gearing up for a career change, as I get ready to make the leap from developing drugs to developing software.</p>
-          <div class="navbar">
-            <ul class="navlist">
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#work-experience">Experience</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
         </div>
       </header>
+
+      <!--Navbar-->
+      <nav>
+        <i class="fas fa-bars navicon"></i>
+        <ul class="navlist">
+          <li><a href=#about>About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#work-experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
       <!--Projects-->
       <section id="projects">
@@ -138,8 +144,8 @@
       <footer id="contact">
         <div class="content-wrap contact-info">
           <h2>Find me on:</h2>
-          <a class="big-link" href="https://www.linkedin.com/in/eleanor-eiffe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="big-link" href="https://github.com/ejeiffe" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="big-link" href="https://www.linkedin.com/in/eleanor-eiffe/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a class="big-link" href="https://github.com/ejeiffe" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
           </div>
       </footer>
     </main>
