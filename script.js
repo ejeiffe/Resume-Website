@@ -32,6 +32,11 @@ const closeModal = (modalId) => {
     let modal = document.querySelector(modalId);
     modal.style.display = "none";
 }
+window.onclick = (event) => {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+    }
+}
 
 /*Project 1 - Reference Manager*/
 const refManBtn = document.querySelector("#ref-man-btn");
