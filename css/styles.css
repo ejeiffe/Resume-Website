@@ -134,16 +134,20 @@ nav a {
   display: flex;
   flex-wrap: wrap;
 }
-.card {
+.project-item {
   max-width: 300px;
   max-height: 300px;
+  flex: 0 0 300px;
+  margin: 5px;
+}
+.card {
+  width: 100%;
+  height: 300px;
   border: 10px solid #3fdecc;
   background: #fff;
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex: 0 0 300px;
-  margin: 5px;
   justify-content: space-evenly;
 }
 .card:hover {
@@ -153,7 +157,7 @@ nav a {
   margin-top: 0;
 }
 .card img {
-  height: 33%;
+  height: 100px;
   width: auto;
   padding: 10px;
 }
@@ -233,15 +237,6 @@ footer {
 @media screen and (min-width: 750px) {
   header p {
     margin-bottom: 0;
-  }
-  .project-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
-    align-items: start;
-  }
-  .project-item h3 {
-    margin-top: 0;
   }
   .job-item {
     display: grid;

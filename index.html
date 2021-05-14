@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/289e406dbd.js" crossorigin="anonymous"></script>
-    <script src="script.js" async></script>
+    <script type="module" src="./components/project.js"></script>
+    <script type="module" src="./components/data.js"></script>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <main>
@@ -41,60 +43,8 @@
           <p>View selected Python projects below. For more information see <a href="https://github.com/ejeiffe" target="_blank" rel="noopener noreferrer">my GitHub profile.</a></p>
 
           <div class="container">
-            <!--Project 1-->
-            <div class="card">
-              <h3>Reference Manager</h3>
-              <img src="images/journal.png" alt="Article icon">
-              <a class="btn" id="ref-man-btn">Learn More</a>
-            </div>
-            <div class="modal" id="ref-man-modal">
-              <div class="project-description">
-                <img src="images/reference.png" alt="Screenshot of Reference Manager">
-                <h3>Reference Manager</h3>
-                <p>Inspired by <a href="https://endnote.com/" target="_blank" rel="noopener noreferrer">EndNote</a>, I created a simple application for storing bibliographic information on journal articles in a searchable database. This project taught me how to build and query a database with sqlite3 and how to build a GUI with PyQt.</p>
-                <div class="modal-buttons">
-                  <a class="btn" href="https://github.com/ejeiffe/Reference-Manager" target="_blank" rel="noopener noreferrer">View on Github</a>
-                  <a href="" class="close" id="ref-man-x">&times;</a>
-                </div>
-              </div>
-            </div>
-
-            <!--Project 2-->
-            <div class="card">
-              <h3>To-Do List</h3>
-              <img src="images/checkbox.png" alt="Checkbox icon">
-              <a class="btn" id="to-do-btn">Learn More</a>
-            </div>
-            <div class="modal" id="to-do-modal">
-              <div class="project-description">
-                <img src="images/todo.png" alt="Screenshot of To-Do List">
-                <h3>To-Do List</h3>
-                <p>This application keeps track of tasks, projects, and deadlines. Building it enabled me to develop my SQL skills and experiment with tables and tabbed layouts for the user interface.</p>
-                <div class="modal-buttons">
-                  <a class="btn" href="https://github.com/ejeiffe/To-Do-List" target="_blank" rel="noopener noreferrer">View on Github</a>
-                  <a href="" class="close" id="to-do-x">&times;</a>
-                </div>
-              </div>
-            </div>
-
-            <!--Project 3-->
-            <div class="card">
-              <h3>Analogue Generator</h3>
-              <img src="images/structure.png" alt="Chemical icon">
-              <a class="btn" id="ana-gen-btn">Learn More</a>
-            </div>
-            <div class="modal" id="ana-gen-modal">
-              <div class="project-description">
-                <img src="images/analogue.jpg" alt="Screenshot of Reference Manager">
-                <h3>Analogue Generator</h3>
-                <p>I built this application to solve a professional problem: the need to quickly and easily generate chemical structures for drug design projects. In a few clicks, the Analogue Generator creates a .csv file of SMILES strings ready for molecular modelling.</p>
-                <div class="modal-buttons">
-                  <a class="btn" href="https://github.com/ejeiffe/Analogue_Generator" target="_blank" rel="noopener noreferrer">View on Github</a>
-                  <a href="" class="close" id="ana-gen-x">&times;</a>
-                </div>
-              </div>
-            </div>
-        </div>
+          <!--Project Items added by script-->
+          </div>
         </div>
       </section>
 
