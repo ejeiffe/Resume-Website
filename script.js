@@ -14,16 +14,60 @@ const projectList = projectItems.map((project) => {
     </div>
     <div class="modal">
       <div class="project-description">
-        <img src=${project.modalImage.src} alt=${project.modalImage.alt}>
+        <div class="slideshow-container">
+        </div>
+        <div class="slideshow-btns">
+          <a class="prev modal-btn">&#10094;</a>
+          <a class="next modal-btn">&#10095;</a>
+        </div>
         <h3>${project.name}</h3>
         <p>${project.description}</p>
         <div class="modal-buttons">
           <a class="btn" href=${project.gitHubUrl} target="_blank" rel="noopener noreferrer">View on Github</a>
-          <a href="" class="close">&times;</a>
+          <a class="close modal-btn">&times;</a>
         </div>
       </div>
     </div>
     `;
+    //Set up slideshow images
+    project.slideshow.forEach((image) => {
+      let imgContainer = document.createElement("div");
+      imgContainer.classList.add("slideshow-img");
+      let index = project.slideshow.indexOf(image);
+      imgContainer.setAttribute("data-index", index);
+      if (index == 0) {
+        imgContainer.classList.add("active");
+      };
+      imgContainer.innerHTML = `
+      <img src=${image} alt="Screenshot of ${project.name}">
+      `;
+      projectArticle.querySelector(".slideshow-container").appendChild(imgContainer);
+    });
+
+    //Add event listeners for slideshow buttons
+    let nextBtn = projectArticle.querySelector(".next");
+    let prevBtn = projectArticle.querySelector(".prev");
+
+    nextBtn.addEventListener("click", () => {
+      let currImg = projectArticle.querySelector(".active");
+      currImg.classList.remove("active");
+      if (currImg.getAttribute("data-index") == (project.slideshow.length-1)) {
+        currImg.parentElement.firstElementChild.classList.add("active");
+      } else {
+        currImg.nextElementSibling.classList.add("active");
+      }      
+    });
+    prevBtn.addEventListener("click", () => {
+      let currImg = projectArticle.querySelector(".active");
+      currImg.classList.remove("active");
+      if (currImg.getAttribute("data-index") == (0)) {
+        currImg.parentElement.lastElementChild.classList.add("active");
+      } else {
+        currImg.previousElementSibling.classList.add("active");
+      }      
+    });
+
+
     //Event listeners for buttons to open/close modal box
     let learnMore = projectArticle.querySelector(".open");
     let close = projectArticle.querySelector(".close");
@@ -50,7 +94,7 @@ const navbar = document.querySelector("nav");
 
 const stickyPos = navbar.offsetTop;
 
-const toggleSticky = ()=> {
+const toggleSticky = () => {
     if (window.pageYOffset >= stickyPos) {
         navbar.classList.add("sticky");
     } else {
@@ -67,53 +111,4 @@ const navLinks = document.querySelector("nav ul");
 
 navicon.addEventListener("click", function() {
     navLinks.classList.toggle("visible");
-})
-
-// //Modal windows for Projects
-// const openModal = (modalId) => {
-//     let modal = document.querySelector(modalId);
-//     modal.style.display = "block";
-// } 
-
-// const closeModal = (modalId) => {
-//     let modal = document.querySelector(modalId);
-//     modal.style.display = "none";
-// }
-// window.onclick = (event) => {
-//     if (event.target.classList.contains("modal")) {
-//         event.target.style.display = "none";
-//     }
-// }
-
-// //Project 1 - Reference Manager
-// const refManBtn = document.querySelector("#ref-man-btn");
-// refManBtn.addEventListener("click", () => {
-//     openModal("#ref-man-modal");
-// });
-
-// const refManClose = document.querySelector("#ref-man-x");
-// refManClose.addEventListener("click", () => {
-//     closeModal("#ref-man-modal");
-// });
-
-// //Project 2 - To-Do List
-// const toDoBtn = document.querySelector("#to-do-btn");
-// toDoBtn.addEventListener("click", () => {
-//     openModal("#to-do-modal");
-// });
-
-// const toDoClose = document.querySelector("#to-do-x");
-// toDoClose.addEventListener("click", () => {
-//     closeModal("#to-do-modal");
-// });
-
-// //Project 3 - Analogue Generator
-// const anaGenBtn = document.querySelector("#ana-gen-btn");
-// anaGenBtn.addEventListener("click", () => {
-//     openModal("#ana-gen-modal");
-// });
-
-// const anaGenClose = document.querySelector("#ana-gen-x");
-// anaGenClose.addEventListener("click", () => {
-//     closeModal("#ana-gen-modal");
-// });
+});

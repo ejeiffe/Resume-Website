@@ -6,8 +6,7 @@ class Project {
         cardImageSrc,
         cardImageAlt,
         description,
-        modalImageSrc,
-        modalImageAlt,
+        slideshow,
         gitHubUrl,
     ) {
         this.id = id;
@@ -17,10 +16,7 @@ class Project {
             alt: cardImageAlt,
         };
         this.description = description;
-        this.modalImage = {
-            src: modalImageSrc,
-            alt: modalImageAlt,
-        };
+        this.slideshow = slideshow;
         this.gitHubUrl = gitHubUrl;
     }
     openModal() {
@@ -31,6 +27,7 @@ class Project {
         let modal = document.querySelector("#" + this.id + " .modal");
         modal.style.display = "none";
     }
+ 
 }
 
 export default Project;
