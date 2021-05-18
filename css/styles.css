@@ -81,6 +81,7 @@ header .content-wrap {
 /*Navbar*/
 nav {
   background: #34252f;
+  overflow: hidden;
 }
 nav ul {
   list-style-type: none;
@@ -101,7 +102,6 @@ nav a {
   width: 100%;
 }
 .navicon {
-  color: #3fdecc;
   display: none;
 }
 
@@ -295,6 +295,7 @@ footer {
     display: block;
   }
   .navicon {
+    color: #3fdecc;
     display: block;
     text-align: right;
     padding: 5px 10px;
