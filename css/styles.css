@@ -297,6 +297,7 @@ footer {
   .navicon {
     color: #3fdecc;
     display: block;
+    width: 100%;
     text-align: right;
     padding: 5px 10px;
   }
