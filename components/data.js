@@ -10,9 +10,7 @@ const referenceManager = new Project(
     ["../images/ref-man-1.png",
     "../images/ref-man-2.png",
     "../images/ref-man-3.png",
-    "../images/ref-man-4.png",
-    "../images/ref-man-5.png",
-    "../images/ref-man-6.png"],
+    "../images/ref-man-4.png"],
     "https://github.com/ejeiffe/Reference-Manager"
 );
 
@@ -38,10 +36,7 @@ const analogueGenerator = new Project(
     ["../images/ana-gen-1.png",
     "../images/ana-gen-2.png",
     "../images/ana-gen-3.png",
-    "../images/ana-gen-4.png",
-    "../images/ana-gen-5.png",
-    "../images/ana-gen-6.png",
-    "../images/ana-gen-7.png"],
+    "../images/ana-gen-4.png"],
     "https://github.com/ejeiffe/Analogue_Generator"
 );
 

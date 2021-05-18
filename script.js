@@ -75,8 +75,15 @@ const projectList = projectItems.map((project) => {
     learnMore.addEventListener("click", () => {
       project.openModal();
     });
+    
     close.addEventListener("click", () => {
       project.closeModal();
+      //Reset slideshow to image 1
+      let currImg = projectArticle.querySelector(".active");
+      if (currImg.getAttribute("data-index") != (0)) {
+        currImg.classList.remove("active");
+        currImg.parentElement.firstElementChild.classList.add("active");
+      }
     });
     
     return projectArticle;
